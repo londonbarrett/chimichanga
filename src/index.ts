@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { exit } from "process";
+import { findSumPairs } from "./findSumPairs";
 
 const program = new Command();
 
@@ -25,7 +25,8 @@ program
       .split(",")
       .map((num) => parseInt(num.trim(), 10));
     const target = parseInt(options.target, 10);
-    console.log("Chimichanga!", numbers, target);
+    const result = findSumPairs(numbers, target);
+    console.log("Chimichanga!", result);
   });
 
 program.parse();
