@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import { Command } from "commander";
-import { findSumPairs } from "./findSumPairs";
 
-const program = new Command();
-
+Object.defineProperty(exports, "__esModule", { value: true });
+const commander_1 = require("commander");
+const findSumPairs_1 = require("./findSumPairs");
+const program = new commander_1.Command();
 program
   .version("1.0.0")
   .description(
@@ -22,12 +22,11 @@ program
     if (!/^\d+$/.test(options.target)) {
       throw Error("Target should be an integer");
     }
-    const numbers = (options.numbers as string)
+    const numbers = options.numbers
       .split(",")
       .map((num) => parseInt(num.trim(), 10));
     const target = parseInt(options.target, 10);
-    const result = findSumPairs(numbers, target);
+    const result = (0, findSumPairs_1.findSumPairs)(numbers, target);
     console.log("Chimichangas!", result);
   });
-
 program.parse();

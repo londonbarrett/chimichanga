@@ -1,14 +1,15 @@
 {
-  "name": "chimichanga",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "chimichangas",
+  "version": "1.0.5",
+  "description": "An exquisite CLI command to find sum pairs given a list of comma separated integers and a sumatory target",
+  "main": "bin/index.js",
+  "homepage": "https://github.com/londonbarrett/chimichangas",
   "scripts": {
     "build": "tsc",
     "start": "ts-node src/index.ts",
     "test": "jest"
   },
-  "author": "Andres Londono",
+  "author": "Andres Londono<alondono.dev@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.4",
@@ -19,5 +20,11 @@
   },
   "dependencies": {
     "commander": "^11.0.0"
+  },
+  "bin": {
+    "chimichangas": "bin/index.js"
+  },
+  "engines": {
+    "node": "^16"
   }
 }

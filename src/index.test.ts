@@ -7,7 +7,7 @@ describe("CLI Tests", () => {
     );
     const output = result.toString();
     const expectedOutput =
-      "Chimichanga! [ [ 14, 2 ], [ 13, 3 ], [ 12, 4 ], [ 10, 6 ] ]";
+      "Chimichangas! [ [ 14, 2 ], [ 13, 3 ], [ 12, 4 ], [ 10, 6 ] ]";
     expect(output).toMatch(expectedOutput);
   });
   it("Throws error when target is not a number", () => {
